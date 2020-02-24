@@ -37,6 +37,10 @@ namespace Store.Classes
 
 				return stock;
 			}
+			private set
+			{
+				stock = value;
+			}
 		}
 
 		public int Quantity
@@ -46,7 +50,7 @@ namespace Store.Classes
 			{
 				if (value <= 0)
 				{
-					throw new Exception("You can only assign a value greater or equal to 1 in quantoty for the book");
+					throw new Exception("You can only assign a value greater or equal to 1 in quantity for the book");
 				}
 				quantity = value;
 			}
@@ -62,7 +66,7 @@ namespace Store.Classes
 
 		public void AddStock(int quantity)
 		{
-			stock += quantity;
+			Stock += quantity;
 
 		}
 		#endregion
