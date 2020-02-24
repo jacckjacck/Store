@@ -12,23 +12,18 @@ namespace Store
         static void Main(string[] args)
         {
             //Instance of the book class
-            Book cleanCode = new Book();
-
-            //Setting the properties
-            cleanCode.Title = "Clean code";
-            cleanCode.Author = "Robert C. Martin";
-            cleanCode.Editorial = "Anaya";
+            Book cleanCode = new Book("Clean code", "Robert C. Martin", "Anaya", 20);
 
             //Other way for creating the instance of the class
             Book cleanArchitecture = new Book
-            {
-                Author = "Robert C. Martin",
-                Editorial = "Anaya",
-                Title = "Clean Architecture",
-            };
+            (
+                "Clean Architecture",
+                "Robert C. Martin",
+                "Anaya"
+            );
             
             //Using the method AddStock to add more books to the store
-            cleanCode.AddStock(10);
+            //cleanCode.AddStock(10);
 
             //Throws an exception beacuse of negative value
             //cleanCode.Quantity=-10;

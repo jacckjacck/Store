@@ -57,6 +57,17 @@ namespace Store.Classes
 		}
 		#endregion
 
+		#region Constructors
+
+		public Book(string title, string author, string editorial, int stock = 0)
+		{
+			Title = title;
+			Author = author;
+			Editorial = editorial;
+			Stock = stock;
+		}
+		#endregion
+
 		#region Public Methods
 
 		public int GetRealStock()
